@@ -1,4 +1,23 @@
 .fancy-header {
-    color: purple;
+    color: navy;
     text-decoration: underline;
 }
+.center {
+    text-align: center;
+}
+h1, h2 {
+    color: orangered;
+    text-decoration: underline;
+}
+body {
+    background-color: whitesmoke;
+    background-image: url("https://199lj33nqk3p88xz03dvn481-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/codey-1.png");
+    background-size: cover;
+}
+ul, ol {
+    list-style: square;
+}
+
+body {
+font-family: Helvetica
+    }
