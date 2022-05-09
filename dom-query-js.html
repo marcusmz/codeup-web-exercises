@@ -24,6 +24,21 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+
+<hr>
+<button id="button1">Main Header</button>
+<br>
+<br>
+<button id="button2">Sub Header</button>
+<br>
+<br>
+<button id="button3">Change List Text Color</button>
+<br>
+<br>
+<button id="button4">Change Sub-Paragraph Text</button>
+
+
+
 <script>
         (function() {
             "use strict";
@@ -31,39 +46,62 @@
             var mainHeader = document.getElementById("main-header");
 
             // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-            mainHeader.innerHTML = "Javascript is Cool!";
+            document.getElementById("button1").addEventListener("click", function() {
+                mainHeader.innerHTML = "Javascript is Cool!";
+            });
 
             // TODO: Uncomment the next line and get the sub header element by id
             var subHeader = document.getElementById("sub-header");
 
             // TODO: Set the text color of subHeader to blue
-            subHeader.style.color = "blue";
+            document.getElementById("button2").addEventListener("click", function() {
+                subHeader.style.color = "blue";
+            });
 
             // TODO: Uncomment the next line and get all list items
             var listItems = document.getElementsByTagName("li");
 
             // TODO: Set text color on every other list item to grey
-            for(let i = 0; i < listItems.length; i++){
-                if (i % 2 === 0){
-                    listItems[i].style.background = "grey";
+            //     for (let i = 0; i < listItems.length; i++) {
+            //         if (i % 2 === 0) {
+            //             listItems[i].style.background = "grey";
+            //         }
+            //     }
+            document.getElementById("button3").addEventListener("click", function () {
+                for (var i = 0; i < listItems.length; i++) {
+                    if (i % 2 === 0) {
+                        listItems[i].style.color = "grey";
+                    }
+                    if (listItems[i].getAttribute("data-dbid") === '1') {
+                        listItems[i].style.color = 'blue';
+                    }
                 }
-            }
+        })
 
-            // TODO: Set text color of li with dbid = 1 to blue
-            for(let i = 0; i < listItems.length; i++){
-                if (listItems[i].getAttribute("data-dbid") === "1"){
-                    listItems[i].style.color = "blue";
-                }
-            }
+                    // TODO: Set text color of li with dbid = 1 to blue
+                    for (let i = 0; i < listItems.length; i++) {
+                        if (listItems[i].getAttribute("data-dbid") === "1") {
+                            listItems[i].style.color = "blue";
+                        }
+                    }
 
-            // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-            var subParagraphs = document.querySelectorAll(".sub-paragraph");
-            //console.log(document.querySelectorAll(".sub-paragraph"));
+                    // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+                    var subParagraphs = document.querySelectorAll(".sub-paragraph");
+                    //console.log(document.querySelectorAll(".sub-paragraph"));
 
-            // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-            subParagraphs[0].innerHTML = "Mission Accomplished!"
+                    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+                    //subParagraphs[0].innerHTML = "Mission Accomplished!"
+                    document.querySelector("#button4").addEventListener("click", function() {
+                    subParagraphs[0].innerText = "Mission Accomplished!";
 
-    })();
+        });
+
+                    //---- Add buttons ----
+                    // *buttons addded to top of doc*
+                    // Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the modifications that
+                    // were automatically taking place. For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
+
+                })();
 </script>
 </body>
 </html>
