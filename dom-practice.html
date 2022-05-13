@@ -27,6 +27,18 @@
 
     button.addEventListener("click", changeColor);
 
+    // ====== Warm up 5.13 =========
+    // Warm-Up:
+    // Create a paragraph element in your dom-practice.html and give it an ID of doubleSize
+    // Add the dblclick  event listener to the paragraph.
+    //     When the element is double clicked, log the font-size of the element to the console. What is the return type?
+
+    doubleClick.addEventListener("dblclick", function () {
+        console.log(event.target.style.fontSize);
+        let currentFontSize = parseFloat(doubleClick.style.fontSize);
+        return doubleClick.style.fontSize = currentFontSize * 2 + "px";
+    })
+
 
 
 
