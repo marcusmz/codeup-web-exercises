@@ -1,0 +1,39 @@
+.jumbotron{
+    background-image: url("Img/pizza.png");
+    height: 346px;
+    background-size: cover;
+    width: 80%;
+}
+
+.nav {
+    width: 80%;
+    margin: auto;
+}
+
+.nav-move {
+    width: 100%;
+}
+
+ul .profile-move {
+    margin-inline-start: auto;
+}
+
+button > a:link {
+    text-decoration: none;
+    color: white;
+}
+
+button > a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+button > a:hover .ancbut {
+    text-decoration: none;
+    color: white;
+}
+
+button > a:active .ancbut {
+    text-decoration: none;
+    color: white;
+}
