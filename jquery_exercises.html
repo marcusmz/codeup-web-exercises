@@ -29,32 +29,62 @@
 <!--- custom css goes BELOW CDN !>-->
 <script>
 
-    $(document).ready(function(){
-        // --work starts here--
-        // alert($("#pageLink").html());
-        // Change content
-        // alert($("#list").html());
-
-        // /class selectors
-        // $('.codeup').css('border', '1px solid red');
+    // $(document).ready(function(){
+    //     --work starts here--
+    //     alert($("#pageLink").html());
+    //     Change content
+    //     alert($("#list").html());
+    //
+    //     /class selectors
+    //     $('.codeup').css('border', '1px solid red');
         // When removing last class border was removed from last list
         // the other element did not get a border because we are targeting classes and not an ID
 
-        // element selectors
-        // $('li').css('font-size', '20px')
-        // $('p')
-        // $('h1')
-        // $('li')
-        // alert($('h1').html());
+    //     element selectors
+    //     $('li').css('font-size', '20px')
+    //     $('p')
+    //     $('h1')
+    //     $('li')
+    //     alert($('h1').html());
+    //
+    //     Multiple Selectors
+    //     $('p, h1, li');
+    //
+    //
+    //
+    //
+    //     alert("Ready");
+    // }());
 
-        // Multiple Selectors
-        // $('p, h1, li');
+    // --- Mouse events ----
+    // Remove your custom jQuery code from previous exercises.
+
+        // Add jQuery code that will change the background color of an h1 element when clicked.
+        $('h1').click(function (e) {
+        e.target.style.backgroundColor = 'red';
+        });
+
+        // Make all paragraphs have a font size of 18px when they are double clicked.
+        $("p").dblclick(function (e) {
+            e.target.style.fontsize = "18px"
+        });
+
+        // Set all li text color to red when the mouse is hovering; reset to black when it is not.
+        function hoverIn () {
+            //color to red when hovered over
+            e.target.style.color = "red";
+        }
+
+        function hoverOut () {
+            //reset to black when not hovering
+            e.target.style.color = "black";
+        }
+
+        $("li").hover(hoverIn, hoverOut)
 
 
 
 
-        // alert("Ready");
-    }());
 </script>
 
 </body>
