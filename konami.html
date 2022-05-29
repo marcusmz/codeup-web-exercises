@@ -1,0 +1,118 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Konami Code</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Konami Code</h1>-->
+
+<!--<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>-->
+<!--<script>-->
+<!--    $(function( ){-->
+<!--        $('#target').bind('keyup', typer);-->
+<!--    });-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    "use strict";-->
+<!--    $(document).ready(function () {-->
+
+<!--        var konamiCode = '↑ ↑ ↓ ↓ ← → ← → b a enter'-->
+<!--        var userInput = "";-->
+
+<!--        $(document).keyup(function (event) {-->
+<!--            userInput += event.keyCode;-->
+
+<!--            if (userInput === konamiCode) {-->
+<!--                alert('you have added 30 lives!')-->
+<!--            }-->
+<!--        })-->
+<!--    });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Konami Code</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Konami Code</h1>-->
+
+<!--<h3>Type in your code here:</h3>-->
+<!--<form>-->
+<!--    <input type="text" id="textfield" name="textfield" placeholder="Use Code"/>-->
+<!--    <button type="submit"></button>-->
+<!--</form>-->
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>-->
+<!--<script src="js/jquery.js"></script>-->
+
+<!--<script>-->
+<!--    "use strict";-->
+
+<!--    var konamiSequence =-->
+<!--        // create variable for the sequence-->
+<!--        $(document).keyup(function(event){-->
+<!--            console.log(event.keyCode);-->
+
+<!--            // use .include to check for keypresses-->
+<!--        });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+
+<h1>Konami Cheat Code!</h1>
+<hr>
+<p>Don't forget to press "Enter" when you're done</p>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script>
+    $(function() {
+
+        "use strict";
+
+        const konami = {
+            sequence: [
+                'ArrowUp',
+                'ArrowUp',
+                'ArrowDown',
+                'ArrowDown',
+                'ArrowLeft',
+                'ArrowRight',
+                'ArrowLeft',
+                'ArrowRight',
+                'b',
+                'a',
+                'Enter'
+            ],
+            index: 0
+        };
+
+        $(document).keydown(function(e) {
+            konami.sequence[konami.index] === e.key ? konami.index += 1 : konami.index = 0;
+            if (konami.index === konami.sequence.length) {
+                alert("YOU HAVE 30 LIVES!");
+                konami.index = 0;
+            }
+        });
+
+    })();
+</script>
+</body>
+</html>
